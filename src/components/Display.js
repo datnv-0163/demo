@@ -6,10 +6,10 @@ const Display = () => {
   const { number, storedNumber, functionType } = useContext(NumberContext);
   return (
     <DisplayStyles>
-      <h2 className={storedNumber && storedNumber.length > 12 ? 'long-main-display' : undefined}>
+      <h2 >
         {!number.length && !storedNumber ? '0' : number || storedNumber}
       </h2>
-      <p className={storedNumber && storedNumber.length > 12 ? 'long-stored-display' : undefined}>
+      <p >
         {!storedNumber ? 'ENTER SOME NUMBERS' : `${storedNumber} ${functionType} ${number}`}
       </p>
     </DisplayStyles>
